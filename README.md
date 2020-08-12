@@ -1,10 +1,15 @@
 # Setup-MariaDB-server
 Setup MariaDB server for remote client access
 
-The option file in the home dir had no effect.
-Option file that actually registed with MariaDB: /etc/mysql/my.cnf
+Installed on Ubuntu 20:
+sudo apt install mariadb-server
 
-Comment out the below lines:
+Edit the option file.
+The option file in the home dir had no effect in my case.
+Option file that actually registed with MariaDB:
+sudo nano /etc/mysql/my.cnf
+
+Comment out the below lines(if exists):
  [mysqld]
     ...
     #skip-networking
