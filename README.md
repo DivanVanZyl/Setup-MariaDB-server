@@ -23,3 +23,13 @@ Log into mysql command line client with: sudo mysql
 
 Set up user with remote access:
 grant all privileges on *.* to 'root'@'DESKTOP-1234.home' identified by 'SomePassword' with grant option;
+
+Check users:
+sleect user, host from sqlserver.user;
+
+Install firewalld:
+sudo apt install firewalld
+
+Add exception to firewall for port 3306:
+sudo firewall-cmd --add-port=3306/tcp
+sudo firewall-cmd --permanent --add-port=3306/tcp
